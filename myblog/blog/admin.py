@@ -10,7 +10,15 @@ class PostAdmin(admin.ModelAdmin):
         'author',
     ]
 
+    class Media:
+        js = (
+            '/static/blog/js/editor/kindeditor-all.js',
+            '/static/blog/js/editor/lang/zh-CN.js',
+            '/static/blog/js/editor/config.js',
+        )
+
 
 admin.site.register(Category)
 admin.site.register(Tag)
 admin.site.register(Post, PostAdmin)
+
