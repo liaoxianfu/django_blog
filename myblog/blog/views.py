@@ -16,6 +16,7 @@ def detail(request, pk):
     # 文章标题
     # 文章的分类
     post = get_object_or_404(Post, pk=pk)
+    # post = get_object_or_404(Post, pk=pk)
     post.body = markdown.markdown(post.body,
                                   extensions=[
                                       'markdown.extensions.extra',

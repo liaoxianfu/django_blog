@@ -8,7 +8,7 @@
                     <header class="entry-header">
                         <h1 class="entry-title">
                         {# 跳转到详细页面#}
-                        <a href="#">{{ post.title }}</a>
+                        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                         </h1>
                         <div class="entry-meta">
 {#                            分类#}
@@ -23,7 +23,7 @@
                      <div class="entry-content clearfix">
                         <p>{{ post.excerpt }}</p>
                         <div class="read-more cl-effect-14">
-                            <a href="#" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+                            <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
                         </div>
                     </div>
                     </article>
@@ -81,3 +81,5 @@
 
 
 {% endblock main %}
+
+

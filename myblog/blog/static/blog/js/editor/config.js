@@ -6,5 +6,6 @@ KindEditor.ready(function(K) {
         // 指定大小
         width:'1200px',
         height:'500px',
+        uploadJson: '/admin/upload/kindeditor'
     });
 });
